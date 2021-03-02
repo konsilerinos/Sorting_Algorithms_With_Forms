@@ -1,3 +1,5 @@
-# Sorting Algorithms With Forms
+# Сортировочная программа (формы).
 
-Testing of sorting algorithms. Windows application.
+Тестирование алгоритмов сортировки. Windows приложение.
+
+![изображение](https://user-images.githubusercontent.com/78896451/109722278-89734380-7bbd-11eb-9c6f-354558a15b56.png)
