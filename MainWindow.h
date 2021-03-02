@@ -139,7 +139,7 @@ namespace SortingAlgorithmsWithForms {
 			this->first_group->Size = System::Drawing::Size(313, 95);
 			this->first_group->TabIndex = 0;
 			this->first_group->TabStop = false;
-			this->first_group->Text = L"Èíèöèàëèçàöèÿ";
+			this->first_group->Text = L"Initialization";
 			// 
 			// get_array
 			// 
@@ -148,7 +148,7 @@ namespace SortingAlgorithmsWithForms {
 			this->get_array->Name = L"get_array";
 			this->get_array->Size = System::Drawing::Size(296, 34);
 			this->get_array->TabIndex = 8;
-			this->get_array->Text = L"Âûäåëèòü ïàìÿòü è çàïîëíèòü ìàññèâ ïñåâäîñëó÷àéíûìè ÷èñëàìè";
+			this->get_array->Text = L"Allocate memory and fill the array with pseudo-random numbers";
 			this->get_array->UseVisualStyleBackColor = true;
 			this->get_array->Click += gcnew System::EventHandler(this, &MainWindow::get_array_Click);
 			// 
@@ -158,7 +158,7 @@ namespace SortingAlgorithmsWithForms {
 			this->size_entering->Name = L"size_entering";
 			this->size_entering->Size = System::Drawing::Size(111, 23);
 			this->size_entering->TabIndex = 7;
-			this->size_entering->Text = L"Ââîä";
+			this->size_entering->Text = L"Input";
 			this->size_entering->UseVisualStyleBackColor = true;
 			this->size_entering->Click += gcnew System::EventHandler(this, &MainWindow::size_entering_Click);
 			// 
@@ -176,9 +176,9 @@ namespace SortingAlgorithmsWithForms {
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(6, 26);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(78, 13);
+			this->label1->Size = System::Drawing::Size(59, 13);
 			this->label1->TabIndex = 2;
-			this->label1->Text = L"Ðàçìåðíîñòü:";
+			this->label1->Text = L"Dimension:";
 			// 
 			// menuStrip1
 			// 
@@ -196,28 +196,29 @@ namespace SortingAlgorithmsWithForms {
 			// 
 			this->ïðîãðàììàToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->âûõîäToolStripMenuItem });
 			this->ïðîãðàììàToolStripMenuItem->Name = L"ïðîãðàììàToolStripMenuItem";
-			this->ïðîãðàììàToolStripMenuItem->Size = System::Drawing::Size(84, 20);
-			this->ïðîãðàììàToolStripMenuItem->Text = L"Ïðîãðàììà";
+			this->ïðîãðàììàToolStripMenuItem->Size = System::Drawing::Size(65, 20);
+			this->ïðîãðàììàToolStripMenuItem->Text = L"Program";
 			// 
 			// âûõîäToolStripMenuItem
 			// 
 			this->âûõîäToolStripMenuItem->Name = L"âûõîäToolStripMenuItem";
-			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(109, 22);
-			this->âûõîäToolStripMenuItem->Text = L"Âûõîä";
+			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(93, 22);
+			this->âûõîäToolStripMenuItem->Text = L"Exit";
 			this->âûõîäToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainWindow::âûõîäToolStripMenuItem_Click);
 			// 
 			// ñïðàâêàToolStripMenuItem
 			// 
 			this->ñïðàâêàToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->ðàçðàáîò÷èêToolStripMenuItem });
 			this->ñïðàâêàToolStripMenuItem->Name = L"ñïðàâêàToolStripMenuItem";
-			this->ñïðàâêàToolStripMenuItem->Size = System::Drawing::Size(65, 20);
-			this->ñïðàâêàToolStripMenuItem->Text = L"Ñïðàâêà";
+			this->ñïðàâêàToolStripMenuItem->Size = System::Drawing::Size(71, 20);
+			this->ñïðàâêàToolStripMenuItem->Text = L"Reference";
 			// 
 			// ðàçðàáîò÷èêToolStripMenuItem
 			// 
 			this->ðàçðàáîò÷èêToolStripMenuItem->Name = L"ðàçðàáîò÷èêToolStripMenuItem";
-			this->ðàçðàáîò÷èêToolStripMenuItem->Size = System::Drawing::Size(144, 22);
-			this->ðàçðàáîò÷èêToolStripMenuItem->Text = L"Ðàçðàáîò÷èê";
+			this->ðàçðàáîò÷èêToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->ðàçðàáîò÷èêToolStripMenuItem->Text = L"Developer";
+			this->ðàçðàáîò÷èêToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainWindow::ðàçðàáîò÷èêToolStripMenuItem_Click);
 			// 
 			// Start_button
 			// 
@@ -226,7 +227,7 @@ namespace SortingAlgorithmsWithForms {
 			this->Start_button->Name = L"Start_button";
 			this->Start_button->Size = System::Drawing::Size(296, 23);
 			this->Start_button->TabIndex = 3;
-			this->Start_button->Text = L"Ñòàðò";
+			this->Start_button->Text = L"Start";
 			this->Start_button->UseVisualStyleBackColor = true;
 			this->Start_button->Click += gcnew System::EventHandler(this, &MainWindow::Start_button_Click);
 			// 
@@ -237,7 +238,7 @@ namespace SortingAlgorithmsWithForms {
 			this->Exchange_button->Name = L"Exchange_button";
 			this->Exchange_button->Size = System::Drawing::Size(145, 23);
 			this->Exchange_button->TabIndex = 4;
-			this->Exchange_button->Text = L"Ñòàíäàðòíûé îáìåí";
+			this->Exchange_button->Text = L"Standard exchange";
 			this->Exchange_button->UseVisualStyleBackColor = true;
 			this->Exchange_button->Click += gcnew System::EventHandler(this, &MainWindow::Exchange_button_Click);
 			// 
@@ -248,7 +249,7 @@ namespace SortingAlgorithmsWithForms {
 			this->Insert_button->Name = L"Insert_button";
 			this->Insert_button->Size = System::Drawing::Size(145, 23);
 			this->Insert_button->TabIndex = 5;
-			this->Insert_button->Text = L"Âñòàâêàìè";
+			this->Insert_button->Text = L"Inserts";
 			this->Insert_button->UseVisualStyleBackColor = true;
 			this->Insert_button->Click += gcnew System::EventHandler(this, &MainWindow::Insert_button_Click);
 			// 
@@ -267,16 +268,16 @@ namespace SortingAlgorithmsWithForms {
 			this->groupBox1->Size = System::Drawing::Size(313, 172);
 			this->groupBox1->TabIndex = 7;
 			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Àëãîðèòìû";
+			this->groupBox1->Text = L"Algorithms";
 			// 
 			// algorithm_label
 			// 
 			this->algorithm_label->AutoSize = true;
 			this->algorithm_label->Location = System::Drawing::Point(6, 115);
 			this->algorithm_label->Name = L"algorithm_label";
-			this->algorithm_label->Size = System::Drawing::Size(112, 13);
+			this->algorithm_label->Size = System::Drawing::Size(142, 13);
 			this->algorithm_label->TabIndex = 10;
-			this->algorithm_label->Text = L"Àëãîðèòì íå âûáðàí";
+			this->algorithm_label->Text = L"The algorithm is not selected";
 			// 
 			// Binary_inserts_button
 			// 
@@ -285,7 +286,7 @@ namespace SortingAlgorithmsWithForms {
 			this->Binary_inserts_button->Name = L"Binary_inserts_button";
 			this->Binary_inserts_button->Size = System::Drawing::Size(145, 23);
 			this->Binary_inserts_button->TabIndex = 9;
-			this->Binary_inserts_button->Text = L"Áèíàðíûå âñòàâêè";
+			this->Binary_inserts_button->Text = L"Binary inserts";
 			this->Binary_inserts_button->UseVisualStyleBackColor = true;
 			this->Binary_inserts_button->Click += gcnew System::EventHandler(this, &MainWindow::Binary_inserts_button_Click);
 			// 
@@ -296,7 +297,7 @@ namespace SortingAlgorithmsWithForms {
 			this->Hoar_button->Name = L"Hoar_button";
 			this->Hoar_button->Size = System::Drawing::Size(145, 23);
 			this->Hoar_button->TabIndex = 8;
-			this->Hoar_button->Text = L"Ìåòîä Õîàðà";
+			this->Hoar_button->Text = L"Hoare method";
 			this->Hoar_button->UseVisualStyleBackColor = true;
 			this->Hoar_button->Click += gcnew System::EventHandler(this, &MainWindow::Hoar_button_Click);
 			// 
@@ -307,7 +308,7 @@ namespace SortingAlgorithmsWithForms {
 			this->Simple_choise_button->Name = L"Simple_choise_button";
 			this->Simple_choise_button->Size = System::Drawing::Size(145, 23);
 			this->Simple_choise_button->TabIndex = 7;
-			this->Simple_choise_button->Text = L"Ïðîñòîé âûáîð";
+			this->Simple_choise_button->Text = L"A simple choice";
 			this->Simple_choise_button->UseVisualStyleBackColor = true;
 			this->Simple_choise_button->Click += gcnew System::EventHandler(this, &MainWindow::Simple_choise_button_Click);
 			// 
@@ -318,7 +319,7 @@ namespace SortingAlgorithmsWithForms {
 			this->Shell_button->Name = L"Shell_button";
 			this->Shell_button->Size = System::Drawing::Size(145, 23);
 			this->Shell_button->TabIndex = 6;
-			this->Shell_button->Text = L"Ìåòîä Øåëëà";
+			this->Shell_button->Text = L"Shell Method";
 			this->Shell_button->UseVisualStyleBackColor = true;
 			this->Shell_button->Click += gcnew System::EventHandler(this, &MainWindow::Shell_button_Click);
 			// 
@@ -331,7 +332,7 @@ namespace SortingAlgorithmsWithForms {
 			this->groupBox3->Size = System::Drawing::Size(313, 89);
 			this->groupBox3->TabIndex = 10;
 			this->groupBox3->TabStop = false;
-			this->groupBox3->Text = L"Ðåçóëüòàò";
+			this->groupBox3->Text = L"Result";
 			// 
 			// Show_button
 			// 
@@ -340,7 +341,7 @@ namespace SortingAlgorithmsWithForms {
 			this->Show_button->Name = L"Show_button";
 			this->Show_button->Size = System::Drawing::Size(296, 23);
 			this->Show_button->TabIndex = 11;
-			this->Show_button->Text = L"Ïîêàçàòü ìàññèâ";
+			this->Show_button->Text = L"Show the array";
 			this->Show_button->UseVisualStyleBackColor = true;
 			// 
 			// result_label
@@ -348,9 +349,9 @@ namespace SortingAlgorithmsWithForms {
 			this->result_label->AutoSize = true;
 			this->result_label->Location = System::Drawing::Point(6, 28);
 			this->result_label->Name = L"result_label";
-			this->result_label->Size = System::Drawing::Size(146, 13);
+			this->result_label->Size = System::Drawing::Size(153, 13);
 			this->result_label->TabIndex = 11;
-			this->result_label->Text = L"Âðåìÿ ðàáîòû àëãîðèòìà: -";
+			this->result_label->Text = L"Running time of the algorithm: -";
 			// 
 			// MainWindow
 			// 
@@ -364,7 +365,7 @@ namespace SortingAlgorithmsWithForms {
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
 			this->Name = L"MainWindow";
-			this->Text = L"Àëãîðèòìû ñîðòèðîâêè";
+			this->Text = L"Sorting algorithms";
 			this->first_group->ResumeLayout(false);
 			this->first_group->PerformLayout();
 			this->menuStrip1->ResumeLayout(false);
@@ -390,5 +391,6 @@ private: System::Void Exchange_button_Click(System::Object^ sender, System::Even
 private: System::Void Simple_choise_button_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void Binary_inserts_button_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void Start_button_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void ðàçðàáîò÷èêToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

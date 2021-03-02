@@ -39,7 +39,7 @@ System::Void SortingAlgorithmsWithForms::MainWindow::input_box_TextChanged(Syste
 	Hoar_button->Enabled = false;
 	Binary_inserts_button->Enabled = false;
 
-	algorithm_label->Text = "Алгоритм не выбран.";
+	algorithm_label->Text = "The algorithm is not selected.";
 
 	return System::Void();
 }
@@ -72,7 +72,7 @@ System::Void SortingAlgorithmsWithForms::MainWindow::get_array_Click(System::Obj
 	array = GetSomeArray(array_size);
 
 	if (array == nullptr) {
-		MessageBox::Show("Ошибка выделения памяти", "Ошибка");
+		MessageBox::Show("Memory allocation error", "Error");
 	}
 
 	Show_button->Enabled = true;
@@ -89,54 +89,54 @@ System::Void SortingAlgorithmsWithForms::MainWindow::get_array_Click(System::Obj
 
 System::Void SortingAlgorithmsWithForms::MainWindow::Insert_button_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	result_label->Text = "Время работы алгоритма: -";
+	result_label->Text = "Running time of the algorithm: -";
 	Start_button->Enabled = true;
-	algorithm_label->Text = "Алгоритм: сортировка вставками.";
+	algorithm_label->Text = "Algorithm: sorting by simple selection.";
 	algorithm_number = 1;
 	return System::Void();
 }
 
 System::Void SortingAlgorithmsWithForms::MainWindow::Shell_button_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	result_label->Text = "Время работы алгоритма: -";
+	result_label->Text = "Running time of the algorithm: -";
 	Start_button->Enabled = true;
-	algorithm_label->Text = "Алгоритм: сортировка методом Шелла.";
+	algorithm_label->Text = "Algorithm: sorting by simple selection.";
 	algorithm_number = 3;
 	return System::Void();
 }
 
 System::Void SortingAlgorithmsWithForms::MainWindow::Hoar_button_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	result_label->Text = "Время работы алгоритма: -";
+	result_label->Text = "Running time of the algorithm: -";
 	Start_button->Enabled = true;
-	algorithm_label->Text = "Алгоритм: сортировка методом Хоара.";
+	algorithm_label->Text = "Algorithm: sorting by simple selection.";
 	algorithm_number = 5;
 	return System::Void();
 }
 
 System::Void SortingAlgorithmsWithForms::MainWindow::Exchange_button_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	result_label->Text = "Время работы алгоритма: -";
+	result_label->Text = "Running time of the algorithm: -";
 	Start_button->Enabled = true;
-	algorithm_label->Text = "Алгоритм: сортировка стандартным обменом.";
+	algorithm_label->Text = "Algorithm: sorting by simple selection.";
 	algorithm_number = 2;
 	return System::Void();
 }
 
 System::Void SortingAlgorithmsWithForms::MainWindow::Simple_choise_button_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	result_label->Text = "Время работы алгоритма: -";
+	result_label->Text = "Running time of the algorithm: -";
 	Start_button->Enabled = true;
-	algorithm_label->Text = "Алгоритм: сортировка простым выбором.";
+	algorithm_label->Text = "Algorithm: sorting by simple selection.";
 	algorithm_number = 4;
 	return System::Void();
 }
 
 System::Void SortingAlgorithmsWithForms::MainWindow::Binary_inserts_button_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	result_label->Text = "Время работы алгоритма: -";
+	result_label->Text = "Running time of the algorithm: -";
 	Start_button->Enabled = true;
-	algorithm_label->Text = "Алгоритм: сортировка бинарными вставками.";
+	algorithm_label->Text = "Algorithm: sorting by binary inserts.";
 	algorithm_number = 6;
 	return System::Void();
 }
@@ -147,7 +147,7 @@ System::Void SortingAlgorithmsWithForms::MainWindow::Start_button_Click(System::
 
 	switch (algorithm_number) {
 	case 1:
-		result_label->Text = "Начало сортировки...";
+		result_label->Text = "Start of sorting...";
 		working_time = Convert::ToInt32(InsertSort(array, array_size).count());
 		break;
 	case 3:
@@ -168,10 +168,16 @@ System::Void SortingAlgorithmsWithForms::MainWindow::Start_button_Click(System::
 
 	}
 
-	result_label->Text = "Время работы алгоритма: " + Convert::ToString(working_time) + "ms";
+	result_label->Text = "Running time of the algorithm: " + Convert::ToString(working_time) + "ms";
 	
 	Show_button->Enabled = true;
 
+	return System::Void();
+}
+
+System::Void SortingAlgorithmsWithForms::MainWindow::разработчикToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	MessageBox::Show("Nikki Konsilerin: konsilerin@mail.ru", "Developer");
 	return System::Void();
 }
 
