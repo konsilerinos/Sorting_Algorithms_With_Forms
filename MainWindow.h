@@ -58,8 +58,8 @@ namespace SortingAlgorithmsWithForms {
 	private: System::Windows::Forms::ToolStripMenuItem^ программаToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ экспортКодаДляMatLabToolStripMenuItem;
 	private: System::Windows::Forms::TabPage^ tabPage1;
-	private: System::Windows::Forms::ToolStripMenuItem^ руководствоToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ разработчикToolStripMenuItem;
+
+
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Button^ button1;
@@ -100,7 +100,7 @@ namespace SortingAlgorithmsWithForms {
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::NumericUpDown^ numericUpDown1;
 	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Button^ button5;
+
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::CheckBox^ checkBox10;
 	private: System::Windows::Forms::CheckBox^ checkBox9;
@@ -126,6 +126,12 @@ private: System::Windows::Forms::Label^ label9;
 private: System::Windows::Forms::Label^ label8;
 private: System::Windows::Forms::Label^ label7;
 private: System::Windows::Forms::PictureBox^ pictureBox2;
+private: System::Windows::Forms::ToolStripMenuItem^ руководствоToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ разработчикToolStripMenuItem;
+private: System::Windows::Forms::Button^ button9;
+private: System::Windows::Forms::Button^ button5;
+private: System::Windows::Forms::Button^ button10;
+private: System::Windows::Forms::Button^ button8;
 
 
 
@@ -210,13 +216,16 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->arra = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
+			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
+			this->button10 = (gcnew System::Windows::Forms::Button());
+			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->checkBox10 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox9 = (gcnew System::Windows::Forms::CheckBox());
@@ -246,10 +255,10 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->menuStrip1->SuspendLayout();
 			this->arra->SuspendLayout();
 			this->tabPage1->SuspendLayout();
@@ -307,8 +316,8 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			// разработчикToolStripMenuItem
 			// 
 			this->разработчикToolStripMenuItem->Name = L"разработчикToolStripMenuItem";
-			this->разработчикToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->разработчикToolStripMenuItem->Text = L"Разработчик";
+			this->разработчикToolStripMenuItem->Size = System::Drawing::Size(123, 22);
+			this->разработчикToolStripMenuItem->Text = L"Помощь";
 			// 
 			// arra
 			// 
@@ -339,6 +348,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			// 
 			// groupBox4
 			// 
+			this->groupBox4->Controls->Add(this->button5);
 			this->groupBox4->Controls->Add(this->label1);
 			this->groupBox4->Location = System::Drawing::Point(628, 6);
 			this->groupBox4->Name = L"groupBox4";
@@ -346,6 +356,15 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->groupBox4->TabIndex = 10;
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"Статус выполнения";
+			// 
+			// button5
+			// 
+			this->button5->Location = System::Drawing::Point(9, 309);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(389, 42);
+			this->button5->TabIndex = 26;
+			this->button5->Text = L"Выход";
+			this->button5->UseVisualStyleBackColor = true;
 			// 
 			// label1
 			// 
@@ -361,11 +380,13 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			// 
 			// groupBox3
 			// 
+			this->groupBox3->Controls->Add(this->button10);
+			this->groupBox3->Controls->Add(this->button8);
+			this->groupBox3->Controls->Add(this->button9);
 			this->groupBox3->Controls->Add(this->label6);
 			this->groupBox3->Controls->Add(this->button6);
 			this->groupBox3->Controls->Add(this->numericUpDown1);
 			this->groupBox3->Controls->Add(this->label5);
-			this->groupBox3->Controls->Add(this->button5);
 			this->groupBox3->Controls->Add(this->button4);
 			this->groupBox3->Controls->Add(this->checkBox10);
 			this->groupBox3->Controls->Add(this->checkBox9);
@@ -384,10 +405,37 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"Выбор параметров";
 			// 
+			// button10
+			// 
+			this->button10->Location = System::Drawing::Point(346, 58);
+			this->button10->Name = L"button10";
+			this->button10->Size = System::Drawing::Size(238, 29);
+			this->button10->TabIndex = 27;
+			this->button10->Text = L"Тест неэффективных алгоритмов";
+			this->button10->UseVisualStyleBackColor = true;
+			// 
+			// button8
+			// 
+			this->button8->Location = System::Drawing::Point(346, 93);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(238, 29);
+			this->button8->TabIndex = 26;
+			this->button8->Text = L"Тест эффективных алгоритмов";
+			this->button8->UseVisualStyleBackColor = true;
+			// 
+			// button9
+			// 
+			this->button9->Location = System::Drawing::Point(500, 23);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(84, 29);
+			this->button9->TabIndex = 25;
+			this->button9->Text = L"Снять все";
+			this->button9->UseVisualStyleBackColor = true;
+			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->BackColor = System::Drawing::Color::AliceBlue;
+			this->label6->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label6->ForeColor = System::Drawing::Color::Maroon;
@@ -399,9 +447,9 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(13, 176);
+			this->button6->Location = System::Drawing::Point(13, 174);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(283, 29);
+			this->button6->Size = System::Drawing::Size(283, 33);
 			this->button6->TabIndex = 10;
 			this->button6->Text = L"Запуск";
 			this->button6->UseVisualStyleBackColor = true;
@@ -425,20 +473,11 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->label5->TabIndex = 21;
 			this->label5->Text = L"Количество тестов:";
 			// 
-			// button5
-			// 
-			this->button5->Location = System::Drawing::Point(329, 44);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(108, 23);
-			this->button5->TabIndex = 20;
-			this->button5->Text = L"Снять все";
-			this->button5->UseVisualStyleBackColor = true;
-			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(329, 15);
+			this->button4->Location = System::Drawing::Point(346, 23);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(108, 23);
+			this->button4->Size = System::Drawing::Size(148, 29);
 			this->button4->TabIndex = 10;
 			this->button4->Text = L"Выбрать все";
 			this->button4->UseVisualStyleBackColor = true;
@@ -604,7 +643,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->BackColor = System::Drawing::Color::AliceBlue;
+			this->label3->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label3->ForeColor = System::Drawing::Color::Maroon;
@@ -737,25 +776,16 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->tabPage3->Text = L"Разработчик";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			// 
-			// pictureBox2
+			// label9
 			// 
-			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(6, 6);
-			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(176, 399);
-			this->pictureBox2->TabIndex = 0;
-			this->pictureBox2->TabStop = false;
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label7->Location = System::Drawing::Point(197, 21);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(412, 25);
-			this->label7->TabIndex = 1;
-			this->label7->Text = L"Программу написал: Никки Консильери";
+			this->label9->Location = System::Drawing::Point(197, 75);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(381, 25);
+			this->label9->TabIndex = 3;
+			this->label9->Text = L"GitHub: https://github.com/konsilerinos";
 			// 
 			// label8
 			// 
@@ -768,16 +798,25 @@ private: System::Windows::Forms::PictureBox^ pictureBox2;
 			this->label8->TabIndex = 2;
 			this->label8->Text = L"Связь: konsilerin@mail.ru";
 			// 
-			// label9
+			// label7
 			// 
-			this->label9->AutoSize = true;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label9->Location = System::Drawing::Point(197, 75);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(381, 25);
-			this->label9->TabIndex = 3;
-			this->label9->Text = L"GitHub: https://github.com/konsilerinos";
+			this->label7->Location = System::Drawing::Point(197, 21);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(412, 25);
+			this->label7->TabIndex = 1;
+			this->label7->Text = L"Программу написал: Никки Консильери";
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(6, 6);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(176, 399);
+			this->pictureBox2->TabIndex = 0;
+			this->pictureBox2->TabStop = false;
 			// 
 			// MainWindow
 			// 
