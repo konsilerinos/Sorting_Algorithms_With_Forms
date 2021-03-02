@@ -132,6 +132,7 @@ private: System::Windows::Forms::Button^ button9;
 private: System::Windows::Forms::Button^ button5;
 private: System::Windows::Forms::Button^ button10;
 private: System::Windows::Forms::Button^ button8;
+private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 
 
 
@@ -259,6 +260,7 @@ private: System::Windows::Forms::Button^ button8;
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->backgroundWorker2 = (gcnew System::ComponentModel::BackgroundWorker());
 			this->menuStrip1->SuspendLayout();
 			this->arra->SuspendLayout();
 			this->tabPage1->SuspendLayout();
@@ -744,7 +746,6 @@ private: System::Windows::Forms::Button^ button8;
 				this->Column2,
 					this->Column1
 			});
-			this->dataGridView2->Enabled = false;
 			this->dataGridView2->Location = System::Drawing::Point(6, 20);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->Size = System::Drawing::Size(595, 606);

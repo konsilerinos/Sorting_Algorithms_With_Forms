@@ -59,8 +59,12 @@ System::Void SortingAlgorithmsWithForms::MainWindow::CreateResultTable()
 
 System::Void SortingAlgorithmsWithForms::MainWindow::CreateMatLabCodeTable()
 {
+
 	dataGridView2->RowCount = 50;
 	dataGridView2->ColumnCount = 2;
+
+	dataGridView2->Columns[0]->SortMode = DataGridViewColumnSortMode::NotSortable;
+	dataGridView2->Columns[1]->SortMode = DataGridViewColumnSortMode::NotSortable;
 
 	for (int i = 0; i < dataGridView2->RowCount; i++) {
 		dataGridView2->Rows[i]->Cells[0]->Value = Convert::ToString(i + 1);
