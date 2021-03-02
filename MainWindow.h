@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 namespace SortingAlgorithmsWithForms {
 
@@ -10,7 +10,7 @@ namespace SortingAlgorithmsWithForms {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Ñâîäêà äëÿ MainWindow
+	/// Ğ¡Ğ²Ğ¾Ğ´ĞºĞ° Ğ´Ğ»Ñ MainWindow
 	/// </summary>
 	public ref class MainWindow : public System::Windows::Forms::Form
 	{
@@ -19,13 +19,13 @@ namespace SortingAlgorithmsWithForms {
 		{
 			InitializeComponent();
 			//
-			//TODO: äîáàâüòå êîä êîíñòğóêòîğà
+			//TODO: Ğ´Ğ¾Ğ±Ğ°Ğ²ÑŒÑ‚Ğµ ĞºĞ¾Ğ´ ĞºĞ¾Ğ½ÑÑ‚Ñ€ÑƒĞºÑ‚Ğ¾Ñ€Ğ°
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Îñâîáîäèòü âñå èñïîëüçóåìûå ğåñóğñû.
+		/// ĞÑĞ²Ğ¾Ğ±Ğ¾Ğ´Ğ¸Ñ‚ÑŒ Ğ²ÑĞµ Ğ¸ÑĞ¿Ğ¾Ğ»ÑŒĞ·ÑƒĞµĞ¼Ñ‹Ğµ Ñ€ĞµÑÑƒÑ€ÑÑ‹.
 		/// </summary>
 		~MainWindow()
 		{
@@ -39,10 +39,10 @@ namespace SortingAlgorithmsWithForms {
 
 	protected:
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
-	private: System::Windows::Forms::ToolStripMenuItem^ ïğîãğàììàToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ âûõîäToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ ñïğàâêàToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ ğàçğàáîò÷èêToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ğ°ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ Ğ²Ñ‹Ñ…Ğ¾Ğ´ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ ÑĞ¿Ñ€Ğ°Ğ²ĞºĞ°ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‡Ğ¸ĞºToolStripMenuItem;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::TextBox^ input_box;
 
@@ -89,14 +89,14 @@ namespace SortingAlgorithmsWithForms {
 
 	private:
 		/// <summary>
-		/// Îáÿçàòåëüíàÿ ïåğåìåííàÿ êîíñòğóêòîğà.
+		/// ĞĞ±ÑĞ·Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ğ°Ñ Ğ¿ĞµÑ€ĞµĞ¼ĞµĞ½Ğ½Ğ°Ñ ĞºĞ¾Ğ½ÑÑ‚Ñ€ÑƒĞºÑ‚Ğ¾Ñ€Ğ°.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Òğåáóåìûé ìåòîä äëÿ ïîääåğæêè êîíñòğóêòîğà — íå èçìåíÿéòå 
-		/// ñîäåğæèìîå ıòîãî ìåòîäà ñ ïîìîùüş ğåäàêòîğà êîäà.
+		/// Ğ¢Ñ€ĞµĞ±ÑƒĞµĞ¼Ñ‹Ğ¹ Ğ¼ĞµÑ‚Ğ¾Ğ´ Ğ´Ğ»Ñ Ğ¿Ğ¾Ğ´Ğ´ĞµÑ€Ğ¶ĞºĞ¸ ĞºĞ¾Ğ½ÑÑ‚Ñ€ÑƒĞºÑ‚Ğ¾Ñ€Ğ° â€” Ğ½Ğµ Ğ¸Ğ·Ğ¼ĞµĞ½ÑĞ¹Ñ‚Ğµ 
+		/// ÑĞ¾Ğ´ĞµÑ€Ğ¶Ğ¸Ğ¼Ğ¾Ğµ ÑÑ‚Ğ¾Ğ³Ğ¾ Ğ¼ĞµÑ‚Ğ¾Ğ´Ğ° Ñ Ğ¿Ğ¾Ğ¼Ğ¾Ñ‰ÑŒÑ Ñ€ĞµĞ´Ğ°ĞºÑ‚Ğ¾Ñ€Ğ° ĞºĞ¾Ğ´Ğ°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -106,10 +106,10 @@ namespace SortingAlgorithmsWithForms {
 			this->input_box = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->ïğîãğàììàToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->âûõîäToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->ñïğàâêàToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->ğàçğàáîò÷èêToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ğ°ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->Ğ²Ñ‹Ñ…Ğ¾Ğ´ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->ÑĞ¿Ñ€Ğ°Ğ²ĞºĞ°ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‡Ğ¸ĞºToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->Start_button = (gcnew System::Windows::Forms::Button());
 			this->Exchange_button = (gcnew System::Windows::Forms::Button());
 			this->Insert_button = (gcnew System::Windows::Forms::Button());
@@ -183,8 +183,8 @@ namespace SortingAlgorithmsWithForms {
 			// menuStrip1
 			// 
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->ïğîãğàììàToolStripMenuItem,
-					this->ñïğàâêàToolStripMenuItem
+				this->Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ğ°ToolStripMenuItem,
+					this->ÑĞ¿Ñ€Ğ°Ğ²ĞºĞ°ToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -192,33 +192,33 @@ namespace SortingAlgorithmsWithForms {
 			this->menuStrip1->TabIndex = 1;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
-			// ïğîãğàììàToolStripMenuItem
+			// Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ğ°ToolStripMenuItem
 			// 
-			this->ïğîãğàììàToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->âûõîäToolStripMenuItem });
-			this->ïğîãğàììàToolStripMenuItem->Name = L"ïğîãğàììàToolStripMenuItem";
-			this->ïğîãğàììàToolStripMenuItem->Size = System::Drawing::Size(65, 20);
-			this->ïğîãğàììàToolStripMenuItem->Text = L"Program";
+			this->Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ğ°ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->Ğ²Ñ‹Ñ…Ğ¾Ğ´ToolStripMenuItem });
+			this->Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ğ°ToolStripMenuItem->Name = L"Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ğ°ToolStripMenuItem";
+			this->Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ğ°ToolStripMenuItem->Size = System::Drawing::Size(65, 20);
+			this->Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ğ°ToolStripMenuItem->Text = L"Program";
 			// 
-			// âûõîäToolStripMenuItem
+			// Ğ²Ñ‹Ñ…Ğ¾Ğ´ToolStripMenuItem
 			// 
-			this->âûõîäToolStripMenuItem->Name = L"âûõîäToolStripMenuItem";
-			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(93, 22);
-			this->âûõîäToolStripMenuItem->Text = L"Exit";
-			this->âûõîäToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainWindow::âûõîäToolStripMenuItem_Click);
+			this->Ğ²Ñ‹Ñ…Ğ¾Ğ´ToolStripMenuItem->Name = L"Ğ²Ñ‹Ñ…Ğ¾Ğ´ToolStripMenuItem";
+			this->Ğ²Ñ‹Ñ…Ğ¾Ğ´ToolStripMenuItem->Size = System::Drawing::Size(93, 22);
+			this->Ğ²Ñ‹Ñ…Ğ¾Ğ´ToolStripMenuItem->Text = L"Exit";
+			this->Ğ²Ñ‹Ñ…Ğ¾Ğ´ToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainWindow::Ğ²Ñ‹Ñ…Ğ¾Ğ´ToolStripMenuItem_Click);
 			// 
-			// ñïğàâêàToolStripMenuItem
+			// ÑĞ¿Ñ€Ğ°Ğ²ĞºĞ°ToolStripMenuItem
 			// 
-			this->ñïğàâêàToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->ğàçğàáîò÷èêToolStripMenuItem });
-			this->ñïğàâêàToolStripMenuItem->Name = L"ñïğàâêàToolStripMenuItem";
-			this->ñïğàâêàToolStripMenuItem->Size = System::Drawing::Size(71, 20);
-			this->ñïğàâêàToolStripMenuItem->Text = L"Reference";
+			this->ÑĞ¿Ñ€Ğ°Ğ²ĞºĞ°ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‡Ğ¸ĞºToolStripMenuItem });
+			this->ÑĞ¿Ñ€Ğ°Ğ²ĞºĞ°ToolStripMenuItem->Name = L"ÑĞ¿Ñ€Ğ°Ğ²ĞºĞ°ToolStripMenuItem";
+			this->ÑĞ¿Ñ€Ğ°Ğ²ĞºĞ°ToolStripMenuItem->Size = System::Drawing::Size(71, 20);
+			this->ÑĞ¿Ñ€Ğ°Ğ²ĞºĞ°ToolStripMenuItem->Text = L"Reference";
 			// 
-			// ğàçğàáîò÷èêToolStripMenuItem
+			// Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‡Ğ¸ĞºToolStripMenuItem
 			// 
-			this->ğàçğàáîò÷èêToolStripMenuItem->Name = L"ğàçğàáîò÷èêToolStripMenuItem";
-			this->ğàçğàáîò÷èêToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->ğàçğàáîò÷èêToolStripMenuItem->Text = L"Developer";
-			this->ğàçğàáîò÷èêToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainWindow::ğàçğàáîò÷èêToolStripMenuItem_Click);
+			this->Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‡Ğ¸ĞºToolStripMenuItem->Name = L"Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‡Ğ¸ĞºToolStripMenuItem";
+			this->Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‡Ğ¸ĞºToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‡Ğ¸ĞºToolStripMenuItem->Text = L"Developer";
+			this->Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‡Ğ¸ĞºToolStripMenuItem->Click += gcnew System::EventHandler(this, &MainWindow::Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‡Ğ¸ĞºToolStripMenuItem_Click);
 			// 
 			// Start_button
 			// 
@@ -379,7 +379,7 @@ namespace SortingAlgorithmsWithForms {
 
 		}
 #pragma endregion
-private: System::Void âûõîäToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void Ğ²Ñ‹Ñ…Ğ¾Ğ´ToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void input_box_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
 private: System::Void input_box_TextChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void size_entering_Click(System::Object^ sender, System::EventArgs^ e);
@@ -391,6 +391,6 @@ private: System::Void Exchange_button_Click(System::Object^ sender, System::Even
 private: System::Void Simple_choise_button_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void Binary_inserts_button_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void Start_button_Click(System::Object^ sender, System::EventArgs^ e);
-private: System::Void ğàçğàáîò÷èêToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void Ñ€Ğ°Ğ·Ñ€Ğ°Ğ±Ğ¾Ñ‚Ñ‡Ğ¸ĞºToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

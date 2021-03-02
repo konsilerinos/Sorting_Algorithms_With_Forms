@@ -1,4 +1,4 @@
-#include "MainWindow.h"
+ï»¿#include "MainWindow.h"
 #include "sorting_algorithms.h"
 
 using namespace System;
@@ -44,7 +44,7 @@ System::Void SortingAlgorithmsWithForms::MainWindow::input_box_TextChanged(Syste
 	return System::Void();
 }
 
-System::Void SortingAlgorithmsWithForms::MainWindow::âûõîäToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void SortingAlgorithmsWithForms::MainWindow::Ð²Ñ‹Ñ…Ð¾Ð´ToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	Application::Exit();
 	return System::Void();
@@ -175,7 +175,7 @@ System::Void SortingAlgorithmsWithForms::MainWindow::Start_button_Click(System::
 	return System::Void();
 }
 
-System::Void SortingAlgorithmsWithForms::MainWindow::ðàçðàáîò÷èêToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+System::Void SortingAlgorithmsWithForms::MainWindow::Ñ€Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸ÐºToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 {
 	MessageBox::Show("Nikki Konsilerin: konsilerin@mail.ru", "Developer");
 	return System::Void();
