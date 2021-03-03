@@ -50,7 +50,8 @@ namespace SortingAlgorithmsWithForms {
 
 
 	private: System::ComponentModel::BackgroundWorker^ backgroundWorker1;
-	private: System::Windows::Forms::TabControl^ arra;
+	private: System::Windows::Forms::TabControl^ tab_control;
+
 
 
 
@@ -238,7 +239,7 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			this->руководствоToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->разработчикToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->backgroundWorker1 = (gcnew System::ComponentModel::BackgroundWorker());
-			this->arra = (gcnew System::Windows::Forms::TabControl());
+			this->tab_control = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
 			this->exit_button = (gcnew System::Windows::Forms::Button());
@@ -287,7 +288,7 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->backgroundWorker2 = (gcnew System::ComponentModel::BackgroundWorker());
 			this->menuStrip1->SuspendLayout();
-			this->arra->SuspendLayout();
+			this->tab_control->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->groupBox4->SuspendLayout();
 			this->parameters_box->SuspendLayout();
@@ -328,7 +329,7 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			// exit_short_button
 			// 
 			this->exit_short_button->Name = L"exit_short_button";
-			this->exit_short_button->Size = System::Drawing::Size(180, 22);
+			this->exit_short_button->Size = System::Drawing::Size(120, 22);
 			this->exit_short_button->Text = L"Закрыть";
 			this->exit_short_button->Click += gcnew System::EventHandler(this, &MainWindow::exit_short_button_Click);
 			// 
@@ -347,16 +348,16 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			this->разработчикToolStripMenuItem->Size = System::Drawing::Size(123, 22);
 			this->разработчикToolStripMenuItem->Text = L"Помощь";
 			// 
-			// arra
+			// tab_control
 			// 
-			this->arra->Controls->Add(this->tabPage1);
-			this->arra->Controls->Add(this->tabPage2);
-			this->arra->Controls->Add(this->tabPage3);
-			this->arra->Location = System::Drawing::Point(12, 36);
-			this->arra->Name = L"arra";
-			this->arra->SelectedIndex = 0;
-			this->arra->Size = System::Drawing::Size(1047, 677);
-			this->arra->TabIndex = 2;
+			this->tab_control->Controls->Add(this->tabPage1);
+			this->tab_control->Controls->Add(this->tabPage2);
+			this->tab_control->Controls->Add(this->tabPage3);
+			this->tab_control->Location = System::Drawing::Point(12, 36);
+			this->tab_control->Name = L"tab_control";
+			this->tab_control->SelectedIndex = 0;
+			this->tab_control->Size = System::Drawing::Size(1047, 677);
+			this->tab_control->TabIndex = 2;
 			// 
 			// tabPage1
 			// 
@@ -501,6 +502,7 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			this->start_button->TabIndex = 10;
 			this->start_button->Text = L"Запуск";
 			this->start_button->UseVisualStyleBackColor = true;
+			this->start_button->Click += gcnew System::EventHandler(this, &MainWindow::start_button_Click);
 			// 
 			// counter
 			// 
@@ -511,7 +513,7 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			this->counter->Name = L"counter";
 			this->counter->Size = System::Drawing::Size(35, 20);
 			this->counter->TabIndex = 22;
-			this->counter->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->counter->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 5, 0, 0, 0 });
 			// 
 			// label5
 			// 
@@ -537,6 +539,7 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			// 
 			this->checkBox10->AutoSize = true;
 			this->checkBox10->Enabled = false;
+			this->checkBox10->ForeColor = System::Drawing::Color::Maroon;
 			this->checkBox10->Location = System::Drawing::Point(199, 111);
 			this->checkBox10->Name = L"checkBox10";
 			this->checkBox10->Size = System::Drawing::Size(108, 17);
@@ -573,6 +576,7 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			// 
 			this->checkBox7->AutoSize = true;
 			this->checkBox7->Enabled = false;
+			this->checkBox7->ForeColor = System::Drawing::Color::Maroon;
 			this->checkBox7->Location = System::Drawing::Point(199, 42);
 			this->checkBox7->Name = L"checkBox7";
 			this->checkBox7->Size = System::Drawing::Size(81, 17);
@@ -585,6 +589,7 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			// 
 			this->checkBox6->AutoSize = true;
 			this->checkBox6->Enabled = false;
+			this->checkBox6->ForeColor = System::Drawing::Color::Maroon;
 			this->checkBox6->Location = System::Drawing::Point(199, 19);
 			this->checkBox6->Name = L"checkBox6";
 			this->checkBox6->Size = System::Drawing::Size(69, 17);
@@ -597,6 +602,7 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			// 
 			this->checkBox5->AutoSize = true;
 			this->checkBox5->Enabled = false;
+			this->checkBox5->ForeColor = System::Drawing::Color::Maroon;
 			this->checkBox5->Location = System::Drawing::Point(9, 111);
 			this->checkBox5->Name = L"checkBox5";
 			this->checkBox5->Size = System::Drawing::Size(167, 17);
@@ -664,7 +670,7 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			this->groupBox2->Size = System::Drawing::Size(1026, 281);
 			this->groupBox2->TabIndex = 8;
 			this->groupBox2->TabStop = false;
-			this->groupBox2->Text = L"Проведение тестов";
+			this->groupBox2->Text = L"Проведение тестов, мс";
 			// 
 			// dataGridView1
 			// 
@@ -722,9 +728,9 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			this->size_label->ForeColor = System::Drawing::Color::Maroon;
 			this->size_label->Location = System::Drawing::Point(302, 24);
 			this->size_label->Name = L"size_label";
-			this->size_label->Size = System::Drawing::Size(296, 15);
+			this->size_label->Size = System::Drawing::Size(312, 15);
 			this->size_label->TabIndex = 8;
-			this->size_label->Text = L"Ошибка! Размерность - натуральное число";
+			this->size_label->Text = L"Ошибка! Предполагается ввод пустой строки";
 			// 
 			// input_box
 			// 
@@ -903,7 +909,7 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1071, 725);
-			this->Controls->Add(this->arra);
+			this->Controls->Add(this->tab_control);
 			this->Controls->Add(this->menuStrip1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->MainMenuStrip = this->menuStrip1;
@@ -913,7 +919,7 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			this->Load += gcnew System::EventHandler(this, &MainWindow::MainWindow_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
-			this->arra->ResumeLayout(false);
+			this->tab_control->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->groupBox4->ResumeLayout(false);
 			this->groupBox4->PerformLayout();
@@ -937,24 +943,23 @@ private: System::Windows::Forms::Button^ algorithm_button;
 		}
 #pragma endregion
 private: System::Void MainWindow_Load(System::Object^ sender, System::EventArgs^ e);
-// Создание таблиц
+
 private: System::Void CreateResultTable();
 private: System::Void CreateMatLabCodeTable();
 
-// inout_box
 private: System::Void input_box_TextChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void input_box_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
 
 private: System::Void size_enter_button_Click(System::Object^ sender, System::EventArgs^ e);
-
 private: System::Void getting_array_button_Click(System::Object^ sender, System::EventArgs^ e);
-
 private: System::Void all_selecting_button_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void all_unselecting_button_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void no_good_selecting_button_Click(System::Object^ sender, System::EventArgs^ e);
 private: System::Void good_selecting_button_Click(System::Object^ sender, System::EventArgs^ e);
-
 private: System::Void algorithm_button_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void start_button_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void exit_button_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void exit_short_button_Click(System::Object^ sender, System::EventArgs^ e);
 
 private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void checkBox2_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
@@ -967,7 +972,16 @@ private: System::Void checkBox8_CheckedChanged(System::Object^ sender, System::E
 private: System::Void checkBox9_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
 private: System::Void checkBox10_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
 
-private: System::Void exit_button_Click(System::Object^ sender, System::EventArgs^ e);
-private: System::Void exit_short_button_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void BubbleSortingTesting();
+private: System::Void ChoiceSortTesting();
+private: System::Void InsertSortTesting();
+private: System::Void BinaryInsertSortTesting();
+private: System::Void ShellSortTesting();
+private: System::Void QuickSortTesting();
+
+private: System::Void DeleteArrays();
+private: System::Void SetTrueFlags();
+private: System::Void SetStartingMessage();
+
 };
 }
