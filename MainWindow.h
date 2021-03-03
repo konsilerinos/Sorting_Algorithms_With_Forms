@@ -914,6 +914,8 @@ private: System::Windows::Forms::Button^ algorithm_button;
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(1087, 764);
+			this->MinimumSize = System::Drawing::Size(1087, 764);
 			this->Name = L"MainWindow";
 			this->Text = L"Сортировка";
 			this->Load += gcnew System::EventHandler(this, &MainWindow::MainWindow_Load);
