@@ -56,18 +56,26 @@ namespace SortingAlgorithmsWithForms {
 
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::ToolStripMenuItem^ программаToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ экспортКодаДляMatLabToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ exit_short_button;
+
 	private: System::Windows::Forms::TabPage^ tabPage1;
 
 
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ size_enter_button;
+	private: System::Windows::Forms::Label^ memory_label;
 
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::TextBox^ textBox2;
+
+
+	private: System::Windows::Forms::Button^ getting_array_button;
+	private: System::Windows::Forms::Label^ size_label;
+
+
+
+
+	private: System::Windows::Forms::TextBox^ input_box;
+
 
 
 	private: System::Windows::Forms::GroupBox^ groupBox2;
@@ -95,13 +103,18 @@ namespace SortingAlgorithmsWithForms {
 
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::GroupBox^ groupBox4;
-	private: System::Windows::Forms::GroupBox^ groupBox3;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::Button^ button6;
-	private: System::Windows::Forms::NumericUpDown^ numericUpDown1;
-	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::GroupBox^ parameters_box;
 
-	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Label^ start_label;
+
+	private: System::Windows::Forms::Button^ start_button;
+	private: System::Windows::Forms::NumericUpDown^ counter;
+
+
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Button^ all_selecting_button;
+
+
 	private: System::Windows::Forms::CheckBox^ checkBox10;
 	private: System::Windows::Forms::CheckBox^ checkBox9;
 	private: System::Windows::Forms::CheckBox^ checkBox8;
@@ -114,13 +127,16 @@ namespace SortingAlgorithmsWithForms {
 	private: System::Windows::Forms::CheckBox^ checkBox1;
 	private: System::Windows::Forms::GroupBox^ groupBox5;
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
+private: System::Windows::Forms::Button^ export_m_button;
 
-private: System::Windows::Forms::Button^ button7;
-private: System::Windows::Forms::Button^ button2;
+
+private: System::Windows::Forms::Button^ export_txt_button;
+
 private: System::Windows::Forms::DataGridView^ dataGridView2;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
-private: System::Windows::Forms::Label^ label1;
+private: System::Windows::Forms::Label^ status_label;
+
 private: System::Windows::Forms::TabPage^ tabPage3;
 private: System::Windows::Forms::Label^ label9;
 private: System::Windows::Forms::Label^ label8;
@@ -128,11 +144,19 @@ private: System::Windows::Forms::Label^ label7;
 private: System::Windows::Forms::PictureBox^ pictureBox2;
 private: System::Windows::Forms::ToolStripMenuItem^ руководствоToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ разработчикToolStripMenuItem;
-private: System::Windows::Forms::Button^ button9;
-private: System::Windows::Forms::Button^ button5;
-private: System::Windows::Forms::Button^ button10;
-private: System::Windows::Forms::Button^ button8;
+
+private: System::Windows::Forms::Button^ exit_button;
+
+
+private: System::Windows::Forms::Button^ no_good_selecting_button;
+private: System::Windows::Forms::Button^ good_selecting_button;
+
+
 private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
+private: System::Windows::Forms::Button^ all_unselecting_button;
+private: System::Windows::Forms::Button^ algorithm_button;
+
+
 
 
 
@@ -210,24 +234,25 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainWindow::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->программаToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->экспортКодаДляMatLabToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->exit_short_button = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->руководствоToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->разработчикToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->backgroundWorker1 = (gcnew System::ComponentModel::BackgroundWorker());
 			this->arra = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
-			this->button10 = (gcnew System::Windows::Forms::Button());
-			this->button8 = (gcnew System::Windows::Forms::Button());
-			this->button9 = (gcnew System::Windows::Forms::Button());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->exit_button = (gcnew System::Windows::Forms::Button());
+			this->status_label = (gcnew System::Windows::Forms::Label());
+			this->parameters_box = (gcnew System::Windows::Forms::GroupBox());
+			this->algorithm_button = (gcnew System::Windows::Forms::Button());
+			this->no_good_selecting_button = (gcnew System::Windows::Forms::Button());
+			this->good_selecting_button = (gcnew System::Windows::Forms::Button());
+			this->all_unselecting_button = (gcnew System::Windows::Forms::Button());
+			this->start_label = (gcnew System::Windows::Forms::Label());
+			this->start_button = (gcnew System::Windows::Forms::Button());
+			this->counter = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->all_selecting_button = (gcnew System::Windows::Forms::Button());
 			this->checkBox10 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox9 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox8 = (gcnew System::Windows::Forms::CheckBox());
@@ -241,16 +266,16 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->memory_label = (gcnew System::Windows::Forms::Label());
+			this->getting_array_button = (gcnew System::Windows::Forms::Button());
+			this->size_label = (gcnew System::Windows::Forms::Label());
+			this->input_box = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->size_enter_button = (gcnew System::Windows::Forms::Button());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
-			this->button7 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->export_m_button = (gcnew System::Windows::Forms::Button());
+			this->export_txt_button = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -265,8 +290,8 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			this->arra->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->groupBox4->SuspendLayout();
-			this->groupBox3->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
+			this->parameters_box->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->counter))->BeginInit();
 			this->groupBox2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->groupBox1->SuspendLayout();
@@ -293,18 +318,19 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			// 
 			// программаToolStripMenuItem
 			// 
-			this->программаToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->экспортКодаДляMatLabToolStripMenuItem });
+			this->программаToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->exit_short_button });
 			this->программаToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->программаToolStripMenuItem->Name = L"программаToolStripMenuItem";
 			this->программаToolStripMenuItem->Size = System::Drawing::Size(84, 20);
 			this->программаToolStripMenuItem->Text = L"Программа";
 			// 
-			// экспортКодаДляMatLabToolStripMenuItem
+			// exit_short_button
 			// 
-			this->экспортКодаДляMatLabToolStripMenuItem->Name = L"экспортКодаДляMatLabToolStripMenuItem";
-			this->экспортКодаДляMatLabToolStripMenuItem->Size = System::Drawing::Size(120, 22);
-			this->экспортКодаДляMatLabToolStripMenuItem->Text = L"Закрыть";
+			this->exit_short_button->Name = L"exit_short_button";
+			this->exit_short_button->Size = System::Drawing::Size(180, 22);
+			this->exit_short_button->Text = L"Закрыть";
+			this->exit_short_button->Click += gcnew System::EventHandler(this, &MainWindow::exit_short_button_Click);
 			// 
 			// руководствоToolStripMenuItem
 			// 
@@ -335,7 +361,7 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			// tabPage1
 			// 
 			this->tabPage1->Controls->Add(this->groupBox4);
-			this->tabPage1->Controls->Add(this->groupBox3);
+			this->tabPage1->Controls->Add(this->parameters_box);
 			this->tabPage1->Controls->Add(this->groupBox2);
 			this->tabPage1->Controls->Add(this->groupBox1);
 			this->tabPage1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -350,8 +376,8 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			// 
 			// groupBox4
 			// 
-			this->groupBox4->Controls->Add(this->button5);
-			this->groupBox4->Controls->Add(this->label1);
+			this->groupBox4->Controls->Add(this->exit_button);
+			this->groupBox4->Controls->Add(this->status_label);
 			this->groupBox4->Location = System::Drawing::Point(628, 6);
 			this->groupBox4->Name = L"groupBox4";
 			this->groupBox4->Size = System::Drawing::Size(404, 357);
@@ -359,112 +385,133 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"Статус выполнения";
 			// 
-			// button5
+			// exit_button
 			// 
-			this->button5->Location = System::Drawing::Point(9, 309);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(389, 42);
-			this->button5->TabIndex = 26;
-			this->button5->Text = L"Выход";
-			this->button5->UseVisualStyleBackColor = true;
+			this->exit_button->Location = System::Drawing::Point(9, 309);
+			this->exit_button->Name = L"exit_button";
+			this->exit_button->Size = System::Drawing::Size(389, 42);
+			this->exit_button->TabIndex = 26;
+			this->exit_button->Text = L"Выход";
+			this->exit_button->UseVisualStyleBackColor = true;
+			this->exit_button->Click += gcnew System::EventHandler(this, &MainWindow::exit_button_Click);
 			// 
-			// label1
+			// status_label
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->status_label->AutoSize = true;
+			this->status_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->ForeColor = System::Drawing::Color::DarkGreen;
-			this->label1->Location = System::Drawing::Point(6, 21);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(150, 15);
-			this->label1->TabIndex = 10;
-			this->label1->Text = L"Программа запущена";
+			this->status_label->ForeColor = System::Drawing::Color::DarkGreen;
+			this->status_label->Location = System::Drawing::Point(6, 21);
+			this->status_label->Name = L"status_label";
+			this->status_label->Size = System::Drawing::Size(150, 15);
+			this->status_label->TabIndex = 10;
+			this->status_label->Text = L"Программа запущена";
 			// 
-			// groupBox3
+			// parameters_box
 			// 
-			this->groupBox3->Controls->Add(this->button10);
-			this->groupBox3->Controls->Add(this->button8);
-			this->groupBox3->Controls->Add(this->button9);
-			this->groupBox3->Controls->Add(this->label6);
-			this->groupBox3->Controls->Add(this->button6);
-			this->groupBox3->Controls->Add(this->numericUpDown1);
-			this->groupBox3->Controls->Add(this->label5);
-			this->groupBox3->Controls->Add(this->button4);
-			this->groupBox3->Controls->Add(this->checkBox10);
-			this->groupBox3->Controls->Add(this->checkBox9);
-			this->groupBox3->Controls->Add(this->checkBox8);
-			this->groupBox3->Controls->Add(this->checkBox7);
-			this->groupBox3->Controls->Add(this->checkBox6);
-			this->groupBox3->Controls->Add(this->checkBox5);
-			this->groupBox3->Controls->Add(this->checkBox4);
-			this->groupBox3->Controls->Add(this->checkBox3);
-			this->groupBox3->Controls->Add(this->checkBox2);
-			this->groupBox3->Controls->Add(this->checkBox1);
-			this->groupBox3->Location = System::Drawing::Point(6, 133);
-			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(616, 230);
-			this->groupBox3->TabIndex = 9;
-			this->groupBox3->TabStop = false;
-			this->groupBox3->Text = L"Выбор параметров";
+			this->parameters_box->Controls->Add(this->algorithm_button);
+			this->parameters_box->Controls->Add(this->no_good_selecting_button);
+			this->parameters_box->Controls->Add(this->good_selecting_button);
+			this->parameters_box->Controls->Add(this->all_unselecting_button);
+			this->parameters_box->Controls->Add(this->start_label);
+			this->parameters_box->Controls->Add(this->start_button);
+			this->parameters_box->Controls->Add(this->counter);
+			this->parameters_box->Controls->Add(this->label5);
+			this->parameters_box->Controls->Add(this->all_selecting_button);
+			this->parameters_box->Controls->Add(this->checkBox10);
+			this->parameters_box->Controls->Add(this->checkBox9);
+			this->parameters_box->Controls->Add(this->checkBox8);
+			this->parameters_box->Controls->Add(this->checkBox7);
+			this->parameters_box->Controls->Add(this->checkBox6);
+			this->parameters_box->Controls->Add(this->checkBox5);
+			this->parameters_box->Controls->Add(this->checkBox4);
+			this->parameters_box->Controls->Add(this->checkBox3);
+			this->parameters_box->Controls->Add(this->checkBox2);
+			this->parameters_box->Controls->Add(this->checkBox1);
+			this->parameters_box->Location = System::Drawing::Point(6, 133);
+			this->parameters_box->Name = L"parameters_box";
+			this->parameters_box->Size = System::Drawing::Size(616, 230);
+			this->parameters_box->TabIndex = 9;
+			this->parameters_box->TabStop = false;
+			this->parameters_box->Text = L"Выбор параметров";
 			// 
-			// button10
+			// algorithm_button
 			// 
-			this->button10->Location = System::Drawing::Point(346, 58);
-			this->button10->Name = L"button10";
-			this->button10->Size = System::Drawing::Size(238, 29);
-			this->button10->TabIndex = 27;
-			this->button10->Text = L"Тест неэффективных алгоритмов";
-			this->button10->UseVisualStyleBackColor = true;
+			this->algorithm_button->Enabled = false;
+			this->algorithm_button->Location = System::Drawing::Point(13, 174);
+			this->algorithm_button->Name = L"algorithm_button";
+			this->algorithm_button->Size = System::Drawing::Size(96, 33);
+			this->algorithm_button->TabIndex = 28;
+			this->algorithm_button->Text = L"Подтвердить";
+			this->algorithm_button->UseVisualStyleBackColor = true;
+			this->algorithm_button->Click += gcnew System::EventHandler(this, &MainWindow::algorithm_button_Click);
 			// 
-			// button8
+			// no_good_selecting_button
 			// 
-			this->button8->Location = System::Drawing::Point(346, 93);
-			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(238, 29);
-			this->button8->TabIndex = 26;
-			this->button8->Text = L"Тест эффективных алгоритмов";
-			this->button8->UseVisualStyleBackColor = true;
+			this->no_good_selecting_button->Enabled = false;
+			this->no_good_selecting_button->Location = System::Drawing::Point(346, 58);
+			this->no_good_selecting_button->Name = L"no_good_selecting_button";
+			this->no_good_selecting_button->Size = System::Drawing::Size(238, 29);
+			this->no_good_selecting_button->TabIndex = 27;
+			this->no_good_selecting_button->Text = L"Тест неэффективных алгоритмов";
+			this->no_good_selecting_button->UseVisualStyleBackColor = true;
+			this->no_good_selecting_button->Click += gcnew System::EventHandler(this, &MainWindow::no_good_selecting_button_Click);
 			// 
-			// button9
+			// good_selecting_button
 			// 
-			this->button9->Location = System::Drawing::Point(500, 23);
-			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(84, 29);
-			this->button9->TabIndex = 25;
-			this->button9->Text = L"Снять все";
-			this->button9->UseVisualStyleBackColor = true;
+			this->good_selecting_button->Enabled = false;
+			this->good_selecting_button->Location = System::Drawing::Point(346, 93);
+			this->good_selecting_button->Name = L"good_selecting_button";
+			this->good_selecting_button->Size = System::Drawing::Size(238, 29);
+			this->good_selecting_button->TabIndex = 26;
+			this->good_selecting_button->Text = L"Тест эффективных алгоритмов";
+			this->good_selecting_button->UseVisualStyleBackColor = true;
+			this->good_selecting_button->Click += gcnew System::EventHandler(this, &MainWindow::good_selecting_button_Click);
 			// 
-			// label6
+			// all_unselecting_button
 			// 
-			this->label6->AutoSize = true;
-			this->label6->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->all_unselecting_button->Enabled = false;
+			this->all_unselecting_button->Location = System::Drawing::Point(500, 23);
+			this->all_unselecting_button->Name = L"all_unselecting_button";
+			this->all_unselecting_button->Size = System::Drawing::Size(84, 29);
+			this->all_unselecting_button->TabIndex = 25;
+			this->all_unselecting_button->Text = L"Снять все";
+			this->all_unselecting_button->UseVisualStyleBackColor = true;
+			this->all_unselecting_button->Click += gcnew System::EventHandler(this, &MainWindow::all_unselecting_button_Click);
+			// 
+			// start_label
+			// 
+			this->start_label->AutoSize = true;
+			this->start_label->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->start_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label6->ForeColor = System::Drawing::Color::Maroon;
-			this->label6->Location = System::Drawing::Point(302, 182);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(206, 15);
-			this->label6->TabIndex = 23;
-			this->label6->Text = L"Ошибка! Не выбран алгоритм";
+			this->start_label->ForeColor = System::Drawing::Color::Maroon;
+			this->start_label->Location = System::Drawing::Point(359, 182);
+			this->start_label->Name = L"start_label";
+			this->start_label->Size = System::Drawing::Size(206, 15);
+			this->start_label->TabIndex = 23;
+			this->start_label->Text = L"Ошибка! Не выбран алгоритм";
 			// 
-			// button6
+			// start_button
 			// 
-			this->button6->Location = System::Drawing::Point(13, 174);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(283, 33);
-			this->button6->TabIndex = 10;
-			this->button6->Text = L"Запуск";
-			this->button6->UseVisualStyleBackColor = true;
+			this->start_button->Enabled = false;
+			this->start_button->Location = System::Drawing::Point(122, 174);
+			this->start_button->Name = L"start_button";
+			this->start_button->Size = System::Drawing::Size(219, 33);
+			this->start_button->TabIndex = 10;
+			this->start_button->Text = L"Запуск";
+			this->start_button->UseVisualStyleBackColor = true;
 			// 
-			// numericUpDown1
+			// counter
 			// 
-			this->numericUpDown1->Location = System::Drawing::Point(122, 139);
-			this->numericUpDown1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10, 0, 0, 0 });
-			this->numericUpDown1->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
-			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(35, 20);
-			this->numericUpDown1->TabIndex = 22;
-			this->numericUpDown1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->counter->Enabled = false;
+			this->counter->Location = System::Drawing::Point(122, 139);
+			this->counter->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10, 0, 0, 0 });
+			this->counter->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->counter->Name = L"counter";
+			this->counter->Size = System::Drawing::Size(35, 20);
+			this->counter->TabIndex = 22;
+			this->counter->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
 			// label5
 			// 
@@ -475,114 +522,136 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			this->label5->TabIndex = 21;
 			this->label5->Text = L"Количество тестов:";
 			// 
-			// button4
+			// all_selecting_button
 			// 
-			this->button4->Location = System::Drawing::Point(346, 23);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(148, 29);
-			this->button4->TabIndex = 10;
-			this->button4->Text = L"Выбрать все";
-			this->button4->UseVisualStyleBackColor = true;
+			this->all_selecting_button->Enabled = false;
+			this->all_selecting_button->Location = System::Drawing::Point(346, 23);
+			this->all_selecting_button->Name = L"all_selecting_button";
+			this->all_selecting_button->Size = System::Drawing::Size(148, 29);
+			this->all_selecting_button->TabIndex = 10;
+			this->all_selecting_button->Text = L"Выбрать все";
+			this->all_selecting_button->UseVisualStyleBackColor = true;
+			this->all_selecting_button->Click += gcnew System::EventHandler(this, &MainWindow::all_selecting_button_Click);
 			// 
 			// checkBox10
 			// 
 			this->checkBox10->AutoSize = true;
+			this->checkBox10->Enabled = false;
 			this->checkBox10->Location = System::Drawing::Point(199, 111);
 			this->checkBox10->Name = L"checkBox10";
 			this->checkBox10->Size = System::Drawing::Size(108, 17);
 			this->checkBox10->TabIndex = 19;
 			this->checkBox10->Text = L"Пирамидальная";
 			this->checkBox10->UseVisualStyleBackColor = true;
+			this->checkBox10->CheckedChanged += gcnew System::EventHandler(this, &MainWindow::checkBox10_CheckedChanged);
 			// 
 			// checkBox9
 			// 
 			this->checkBox9->AutoSize = true;
+			this->checkBox9->Enabled = false;
 			this->checkBox9->Location = System::Drawing::Point(199, 88);
 			this->checkBox9->Name = L"checkBox9";
 			this->checkBox9->Size = System::Drawing::Size(57, 17);
 			this->checkBox9->TabIndex = 18;
 			this->checkBox9->Text = L"Хоара";
 			this->checkBox9->UseVisualStyleBackColor = true;
+			this->checkBox9->CheckedChanged += gcnew System::EventHandler(this, &MainWindow::checkBox9_CheckedChanged);
 			// 
 			// checkBox8
 			// 
 			this->checkBox8->AutoSize = true;
+			this->checkBox8->Enabled = false;
 			this->checkBox8->Location = System::Drawing::Point(199, 65);
 			this->checkBox8->Name = L"checkBox8";
 			this->checkBox8->Size = System::Drawing::Size(59, 17);
 			this->checkBox8->TabIndex = 17;
 			this->checkBox8->Text = L"Шелла";
 			this->checkBox8->UseVisualStyleBackColor = true;
+			this->checkBox8->CheckedChanged += gcnew System::EventHandler(this, &MainWindow::checkBox8_CheckedChanged);
 			// 
 			// checkBox7
 			// 
 			this->checkBox7->AutoSize = true;
+			this->checkBox7->Enabled = false;
 			this->checkBox7->Location = System::Drawing::Point(199, 42);
 			this->checkBox7->Name = L"checkBox7";
 			this->checkBox7->Size = System::Drawing::Size(81, 17);
 			this->checkBox7->TabIndex = 16;
 			this->checkBox7->Text = L"Челночная";
 			this->checkBox7->UseVisualStyleBackColor = true;
+			this->checkBox7->CheckedChanged += gcnew System::EventHandler(this, &MainWindow::checkBox7_CheckedChanged);
 			// 
 			// checkBox6
 			// 
 			this->checkBox6->AutoSize = true;
+			this->checkBox6->Enabled = false;
 			this->checkBox6->Location = System::Drawing::Point(199, 19);
 			this->checkBox6->Name = L"checkBox6";
 			this->checkBox6->Size = System::Drawing::Size(69, 17);
 			this->checkBox6->TabIndex = 15;
 			this->checkBox6->Text = L"Слияние";
 			this->checkBox6->UseVisualStyleBackColor = true;
+			this->checkBox6->CheckedChanged += gcnew System::EventHandler(this, &MainWindow::checkBox6_CheckedChanged);
 			// 
 			// checkBox5
 			// 
 			this->checkBox5->AutoSize = true;
+			this->checkBox5->Enabled = false;
 			this->checkBox5->Location = System::Drawing::Point(9, 111);
 			this->checkBox5->Name = L"checkBox5";
 			this->checkBox5->Size = System::Drawing::Size(167, 17);
 			this->checkBox5->TabIndex = 14;
 			this->checkBox5->Text = L"Интерполяционная вставка";
 			this->checkBox5->UseVisualStyleBackColor = true;
+			this->checkBox5->CheckedChanged += gcnew System::EventHandler(this, &MainWindow::checkBox5_CheckedChanged);
 			// 
 			// checkBox4
 			// 
 			this->checkBox4->AutoSize = true;
+			this->checkBox4->Enabled = false;
 			this->checkBox4->Location = System::Drawing::Point(9, 88);
 			this->checkBox4->Name = L"checkBox4";
 			this->checkBox4->Size = System::Drawing::Size(119, 17);
 			this->checkBox4->TabIndex = 13;
 			this->checkBox4->Text = L"Бинарная вставка";
 			this->checkBox4->UseVisualStyleBackColor = true;
+			this->checkBox4->CheckedChanged += gcnew System::EventHandler(this, &MainWindow::checkBox4_CheckedChanged);
 			// 
 			// checkBox3
 			// 
 			this->checkBox3->AutoSize = true;
+			this->checkBox3->Enabled = false;
 			this->checkBox3->Location = System::Drawing::Point(9, 65);
 			this->checkBox3->Name = L"checkBox3";
 			this->checkBox3->Size = System::Drawing::Size(113, 17);
 			this->checkBox3->TabIndex = 12;
 			this->checkBox3->Text = L"Простая вставка";
 			this->checkBox3->UseVisualStyleBackColor = true;
+			this->checkBox3->CheckedChanged += gcnew System::EventHandler(this, &MainWindow::checkBox3_CheckedChanged);
 			// 
 			// checkBox2
 			// 
 			this->checkBox2->AutoSize = true;
+			this->checkBox2->Enabled = false;
 			this->checkBox2->Location = System::Drawing::Point(9, 42);
 			this->checkBox2->Name = L"checkBox2";
 			this->checkBox2->Size = System::Drawing::Size(104, 17);
 			this->checkBox2->TabIndex = 11;
 			this->checkBox2->Text = L"Простой выбор";
 			this->checkBox2->UseVisualStyleBackColor = true;
+			this->checkBox2->CheckedChanged += gcnew System::EventHandler(this, &MainWindow::checkBox2_CheckedChanged);
 			// 
 			// checkBox1
 			// 
 			this->checkBox1->AutoSize = true;
+			this->checkBox1->Enabled = false;
 			this->checkBox1->Location = System::Drawing::Point(9, 19);
 			this->checkBox1->Name = L"checkBox1";
 			this->checkBox1->Size = System::Drawing::Size(128, 17);
 			this->checkBox1->TabIndex = 10;
 			this->checkBox1->Text = L"Стандартный обмен";
 			this->checkBox1->UseVisualStyleBackColor = true;
+			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &MainWindow::checkBox1_CheckedChanged);
 			// 
 			// groupBox2
 			// 
@@ -608,12 +677,12 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			// 
 			// groupBox1
 			// 
-			this->groupBox1->Controls->Add(this->label4);
-			this->groupBox1->Controls->Add(this->button3);
-			this->groupBox1->Controls->Add(this->label3);
-			this->groupBox1->Controls->Add(this->textBox2);
+			this->groupBox1->Controls->Add(this->memory_label);
+			this->groupBox1->Controls->Add(this->getting_array_button);
+			this->groupBox1->Controls->Add(this->size_label);
+			this->groupBox1->Controls->Add(this->input_box);
 			this->groupBox1->Controls->Add(this->label2);
-			this->groupBox1->Controls->Add(this->button1);
+			this->groupBox1->Controls->Add(this->size_enter_button);
 			this->groupBox1->Location = System::Drawing::Point(6, 6);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->Size = System::Drawing::Size(616, 121);
@@ -621,46 +690,50 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Инициализация массива";
 			// 
-			// label4
+			// memory_label
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->memory_label->AutoSize = true;
+			this->memory_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label4->ForeColor = System::Drawing::Color::Maroon;
-			this->label4->Location = System::Drawing::Point(302, 74);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(282, 15);
-			this->label4->TabIndex = 9;
-			this->label4->Text = L"Ошибка! Выделение памяти невозможно";
+			this->memory_label->ForeColor = System::Drawing::Color::Maroon;
+			this->memory_label->Location = System::Drawing::Point(302, 74);
+			this->memory_label->Name = L"memory_label";
+			this->memory_label->Size = System::Drawing::Size(282, 15);
+			this->memory_label->TabIndex = 9;
+			this->memory_label->Text = L"Ошибка! Выделение памяти невозможно";
 			// 
-			// button3
+			// getting_array_button
 			// 
-			this->button3->Location = System::Drawing::Point(9, 58);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(287, 50);
-			this->button3->TabIndex = 8;
-			this->button3->Text = L"Выделить память, заполнить псевдо-случайными числами";
-			this->button3->UseVisualStyleBackColor = true;
+			this->getting_array_button->Enabled = false;
+			this->getting_array_button->Location = System::Drawing::Point(9, 58);
+			this->getting_array_button->Name = L"getting_array_button";
+			this->getting_array_button->Size = System::Drawing::Size(287, 50);
+			this->getting_array_button->TabIndex = 8;
+			this->getting_array_button->Text = L"Выделить память, заполнить псевдо-случайными числами";
+			this->getting_array_button->UseVisualStyleBackColor = true;
+			this->getting_array_button->Click += gcnew System::EventHandler(this, &MainWindow::getting_array_button_Click);
 			// 
-			// label3
+			// size_label
 			// 
-			this->label3->AutoSize = true;
-			this->label3->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->size_label->AutoSize = true;
+			this->size_label->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->size_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label3->ForeColor = System::Drawing::Color::Maroon;
-			this->label3->Location = System::Drawing::Point(302, 24);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(296, 15);
-			this->label3->TabIndex = 8;
-			this->label3->Text = L"Ошибка! Размерность - натуральное число";
+			this->size_label->ForeColor = System::Drawing::Color::Maroon;
+			this->size_label->Location = System::Drawing::Point(302, 24);
+			this->size_label->Name = L"size_label";
+			this->size_label->Size = System::Drawing::Size(296, 15);
+			this->size_label->TabIndex = 8;
+			this->size_label->Text = L"Ошибка! Размерность - натуральное число";
 			// 
-			// textBox2
+			// input_box
 			// 
-			this->textBox2->Location = System::Drawing::Point(115, 20);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(100, 20);
-			this->textBox2->TabIndex = 6;
+			this->input_box->Location = System::Drawing::Point(115, 20);
+			this->input_box->Name = L"input_box";
+			this->input_box->Size = System::Drawing::Size(100, 20);
+			this->input_box->TabIndex = 6;
+			this->input_box->TextChanged += gcnew System::EventHandler(this, &MainWindow::input_box_TextChanged);
+			this->input_box->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MainWindow::input_box_KeyPress);
 			// 
 			// label2
 			// 
@@ -671,14 +744,16 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"Размерность (∈ℕ):";
 			// 
-			// button1
+			// size_enter_button
 			// 
-			this->button1->Location = System::Drawing::Point(221, 19);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"Ввод";
-			this->button1->UseVisualStyleBackColor = true;
+			this->size_enter_button->Enabled = false;
+			this->size_enter_button->Location = System::Drawing::Point(221, 19);
+			this->size_enter_button->Name = L"size_enter_button";
+			this->size_enter_button->Size = System::Drawing::Size(75, 23);
+			this->size_enter_button->TabIndex = 0;
+			this->size_enter_button->Text = L"Ввод";
+			this->size_enter_button->UseVisualStyleBackColor = true;
+			this->size_enter_button->Click += gcnew System::EventHandler(this, &MainWindow::size_enter_button_Click);
 			// 
 			// tabPage2
 			// 
@@ -695,8 +770,8 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			// 
 			// groupBox5
 			// 
-			this->groupBox5->Controls->Add(this->button7);
-			this->groupBox5->Controls->Add(this->button2);
+			this->groupBox5->Controls->Add(this->export_m_button);
+			this->groupBox5->Controls->Add(this->export_txt_button);
 			this->groupBox5->Controls->Add(this->pictureBox1);
 			this->groupBox5->Controls->Add(this->dataGridView2);
 			this->groupBox5->Location = System::Drawing::Point(6, 6);
@@ -706,23 +781,27 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			this->groupBox5->TabStop = false;
 			this->groupBox5->Text = L"Для выполнения в MatLab";
 			// 
-			// button7
+			// export_m_button
 			// 
-			this->button7->Location = System::Drawing::Point(607, 541);
-			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(414, 85);
-			this->button7->TabIndex = 3;
-			this->button7->Text = L"Экспорт в sorting_algorithms_script.m";
-			this->button7->UseVisualStyleBackColor = true;
+			this->export_m_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->export_m_button->Location = System::Drawing::Point(607, 541);
+			this->export_m_button->Name = L"export_m_button";
+			this->export_m_button->Size = System::Drawing::Size(414, 85);
+			this->export_m_button->TabIndex = 3;
+			this->export_m_button->Text = L"Экспорт в sorting_algorithms_script.m";
+			this->export_m_button->UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// export_txt_button
 			// 
-			this->button2->Location = System::Drawing::Point(607, 450);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(414, 85);
-			this->button2->TabIndex = 2;
-			this->button2->Text = L"Экспорт в sorting_algorithms_script.txt";
-			this->button2->UseVisualStyleBackColor = true;
+			this->export_txt_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->export_txt_button->Location = System::Drawing::Point(607, 450);
+			this->export_txt_button->Name = L"export_txt_button";
+			this->export_txt_button->Size = System::Drawing::Size(414, 85);
+			this->export_txt_button->TabIndex = 2;
+			this->export_txt_button->Text = L"Экспорт в sorting_algorithms_script.txt";
+			this->export_txt_button->UseVisualStyleBackColor = true;
 			// 
 			// pictureBox1
 			// 
@@ -838,9 +917,9 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 			this->tabPage1->ResumeLayout(false);
 			this->groupBox4->ResumeLayout(false);
 			this->groupBox4->PerformLayout();
-			this->groupBox3->ResumeLayout(false);
-			this->groupBox3->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
+			this->parameters_box->ResumeLayout(false);
+			this->parameters_box->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->counter))->EndInit();
 			this->groupBox2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->groupBox1->ResumeLayout(false);
@@ -858,7 +937,37 @@ private: System::ComponentModel::BackgroundWorker^ backgroundWorker2;
 		}
 #pragma endregion
 private: System::Void MainWindow_Load(System::Object^ sender, System::EventArgs^ e);
+// Создание таблиц
 private: System::Void CreateResultTable();
 private: System::Void CreateMatLabCodeTable();
+
+// inout_box
+private: System::Void input_box_TextChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void input_box_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e);
+
+private: System::Void size_enter_button_Click(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void getting_array_button_Click(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void all_selecting_button_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void all_unselecting_button_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void no_good_selecting_button_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void good_selecting_button_Click(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void algorithm_button_Click(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void checkBox2_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void checkBox3_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void checkBox4_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void checkBox5_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void checkBox6_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void checkBox7_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void checkBox8_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void checkBox9_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+private: System::Void checkBox10_CheckedChanged(System::Object^ sender, System::EventArgs^ e);
+
+private: System::Void exit_button_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void exit_short_button_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

@@ -16,16 +16,27 @@ void main()
 int rows_count = 10;
 int columns_count = 10;
 
+int array_size = 0;
+int* array = nullptr;
+
+bool status_label_memory_flag = true;
+bool status_label_size_flag = true;
+bool status_label_alg_flag = true;
+
+bool check_box_changed = false;
+
+
+// При запуске приложения
 System::Void SortingAlgorithmsWithForms::MainWindow::MainWindow_Load(System::Object^ sender, System::EventArgs^ e)
 {
 	
-
 	CreateMatLabCodeTable();
 	CreateResultTable();
 
 	return System::Void();
 }
 
+// Создание таблиц
 System::Void SortingAlgorithmsWithForms::MainWindow::CreateResultTable()
 {
 	dataGridView1->RowCount = rows_count;
@@ -56,7 +67,6 @@ System::Void SortingAlgorithmsWithForms::MainWindow::CreateResultTable()
 
 	return System::Void();
 }
-
 System::Void SortingAlgorithmsWithForms::MainWindow::CreateMatLabCodeTable()
 {
 
@@ -76,6 +86,367 @@ System::Void SortingAlgorithmsWithForms::MainWindow::CreateMatLabCodeTable()
 
 	dataGridView2->AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders);
 	dataGridView2->AutoResizeColumns();
+
+	return System::Void();
+}
+
+// Изменён текст в поле ввода
+System::Void SortingAlgorithmsWithForms::MainWindow::input_box_TextChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	// Освобождение памяти
+	if (array != nullptr) {
+		delete[] array;
+		array = nullptr;
+		memory_label->Text = "Память освобождена";
+		memory_label->ForeColor = Color::Maroon;
+	}
+
+	// Блокировка кнопок
+	getting_array_button->Enabled = false;
+	all_selecting_button->Enabled = false;
+	all_unselecting_button->Enabled = false;
+	no_good_selecting_button->Enabled = false;
+	good_selecting_button->Enabled = false;
+	start_button->Enabled = false;
+
+	checkBox1->Enabled = false;
+	checkBox2->Enabled = false;
+	checkBox3->Enabled = false;
+	checkBox4->Enabled = false;
+	checkBox5->Enabled = false;
+	checkBox6->Enabled = false;
+	checkBox7->Enabled = false;
+	checkBox8->Enabled = false;
+	checkBox9->Enabled = false;
+	checkBox10->Enabled = false;
+
+	algorithm_button->Enabled = false;
+	counter->Enabled = false;
+
+	if (Convert::ToString(input_box->Text) == "") {
+		
+		size_enter_button->Enabled = false;
+		size_label->Text = "Ошибка! Предполагается ввод пустой строки";
+		size_label->ForeColor = Color::Maroon;
+	}
+	else if (Convert::ToString(input_box->Text)[0] == '0') {
+		size_enter_button->Enabled = false;
+		size_label->Text = "Ошибка! 0 - не натуральное число";
+		size_label->ForeColor = Color::Maroon;
+	}
+	else if (Convert::ToInt32(input_box->Text) >= 1000000) {
+		size_enter_button->Enabled = false;
+		size_label->Text = "Ошибка! Введено слишком большое число";
+		size_label->ForeColor = Color::Maroon;
+	}
+	else {
+		size_enter_button->Enabled = true;
+		size_label->Text = "Готовность ввода размерности";
+		size_label->ForeColor = Color::Maroon;
+	}
+
+	status_label->Text = "Программа запущена";
+	status_label_memory_flag = true;
+	status_label_size_flag = true;
+
+	return System::Void();
+}
+
+// Ввод только чисел
+System::Void SortingAlgorithmsWithForms::MainWindow::input_box_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e)
+{
+	if ((e->KeyChar < 48 || e->KeyChar > 57) && e->KeyChar != '\b') {
+		e->Handled = true;
+	}
+
+	return System::Void();
+}
+
+System::Void SortingAlgorithmsWithForms::MainWindow::size_enter_button_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	array_size = Convert::ToInt32(input_box->Text);
+
+	size_label->Text = "Размерность введена";
+	size_label->ForeColor = Color::DarkGreen;
+
+	if (status_label_size_flag) {
+		status_label->Text = status_label->Text + "\nРазмерность введена";
+		status_label_size_flag = false;
+	}
+
+
+	getting_array_button->Enabled = true;
+	memory_label->Text = "Готовность выделения памяти";
+	memory_label->ForeColor = Color::Maroon;
+
+	return System::Void();
+}
+
+System::Void SortingAlgorithmsWithForms::MainWindow::getting_array_button_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	if (array != nullptr) {
+		delete[] array;
+		array = nullptr;
+	}
+
+	array = new int[array_size];
+	array = GetSomeArray(array_size);
+
+	memory_label->Text = "Память освобождена/выделена!";
+	memory_label->ForeColor = Color::DarkGreen;
+
+	if (status_label_memory_flag) {
+		status_label->Text = status_label->Text + "\nМассив сформирован";
+		status_label_memory_flag = false;
+	}
+
+	// Разблокирование кнопок
+
+	checkBox1->Enabled = true;
+	checkBox2->Enabled = true;
+	checkBox3->Enabled = true;
+	checkBox4->Enabled = true;
+	checkBox5->Enabled = true;
+	checkBox6->Enabled = true;
+	checkBox7->Enabled = true;
+	checkBox8->Enabled = true;
+	checkBox9->Enabled = true;
+	checkBox10->Enabled = true;
+
+	all_selecting_button->Enabled = true;
+	all_unselecting_button->Enabled = true;
+	no_good_selecting_button->Enabled = true;
+	good_selecting_button->Enabled = true;
+
+	algorithm_button->Enabled = true;
+	counter->Enabled = true;
+
+	return System::Void();
+}
+
+System::Void SortingAlgorithmsWithForms::MainWindow::all_selecting_button_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	checkBox1->Checked = true;
+	checkBox2->Checked = true;
+	checkBox3->Checked = true;
+	checkBox4->Checked = true;
+	checkBox5->Checked = true;
+	checkBox6->Checked = true;
+	checkBox7->Checked = true;
+	checkBox8->Checked = true;
+	checkBox9->Checked = true;
+	checkBox10->Checked = true;
+
+	return System::Void();
+}
+
+System::Void SortingAlgorithmsWithForms::MainWindow::all_unselecting_button_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	checkBox1->Checked = false;
+	checkBox2->Checked = false;
+	checkBox3->Checked = false;
+	checkBox4->Checked = false;
+	checkBox5->Checked = false;
+	checkBox6->Checked = false;
+	checkBox7->Checked = false;
+	checkBox8->Checked = false;
+	checkBox9->Checked = false;
+	checkBox10->Checked = false;
+
+	return System::Void();
+}
+
+System::Void SortingAlgorithmsWithForms::MainWindow::no_good_selecting_button_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	checkBox1->Checked = true;
+	checkBox2->Checked = true;
+	checkBox3->Checked = true;
+	checkBox5->Checked = true;
+
+	checkBox4->Checked = false;
+	checkBox6->Checked = false;
+	checkBox7->Checked = false;
+	checkBox8->Checked = false;
+	checkBox9->Checked = false;
+	checkBox10->Checked = false;
+
+	return System::Void();
+}
+
+System::Void SortingAlgorithmsWithForms::MainWindow::good_selecting_button_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	checkBox1->Checked = false;
+	checkBox2->Checked = false;
+	checkBox3->Checked = false;
+	checkBox5->Checked = false;
+
+	checkBox4->Checked = true;
+	checkBox6->Checked = true;
+	checkBox7->Checked = true;
+	checkBox8->Checked = true;
+	checkBox9->Checked = true;
+	checkBox10->Checked = true;
+
+	return System::Void();
+}
+
+System::Void SortingAlgorithmsWithForms::MainWindow::algorithm_button_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	bool checked_status = checkBox1->Checked + checkBox2->Checked + checkBox3->Checked + checkBox4->Checked;
+	checked_status = checked_status + checkBox5->Checked + checkBox6->Checked + checkBox7->Checked + checkBox8->Checked;
+	checked_status = checked_status + checkBox9->Checked + checkBox10->Checked;
+	
+	if (checked_status) {
+		start_button->Enabled = true;
+
+		if (status_label_alg_flag) {
+			status_label->Text = status_label->Text + "\nАлгоритмы выбраны";
+			status_label_alg_flag = false;
+		}
+
+		start_label->Text = "Готовность запуска";
+		start_label->ForeColor = Color::DarkGreen;
+
+	}
+	else {
+		start_label->Text = "Ошибка!Алгоритмы не выбраны";
+		start_label->ForeColor = Color::Maroon;
+	}
+	
+	return System::Void();
+}
+
+System::Void SortingAlgorithmsWithForms::MainWindow::checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	status_label->Text = "Программа запущена\nРазмерность введена\nМассив сформирован";
+	status_label_alg_flag = true;
+	check_box_changed = true;
+
+	start_button->Enabled = false;
+	start_label->Text = "Набор алгоритмов изменён, требуется подтверждение";
+	start_label->ForeColor = Color::Maroon;
+
+	return System::Void();
+}
+System::Void SortingAlgorithmsWithForms::MainWindow::checkBox2_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	status_label->Text = "Программа запущена\nРазмерность введена\nМассив сформирован";
+	status_label_alg_flag = true;
+	check_box_changed = true;
+
+	start_button->Enabled = false;
+	start_label->Text = "Набор алгоритмов изменён, требуется подтверждение";
+	start_label->ForeColor = Color::Maroon;
+
+	return System::Void();
+}
+System::Void SortingAlgorithmsWithForms::MainWindow::checkBox3_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	status_label->Text = "Программа запущена\nРазмерность введена\nМассив сформирован";
+	status_label_alg_flag = true;
+	check_box_changed = true;
+
+	start_button->Enabled = false;
+	start_label->Text = "Набор алгоритмов изменён, требуется подтверждение";
+	start_label->ForeColor = Color::Maroon;
+
+	return System::Void();
+}
+System::Void SortingAlgorithmsWithForms::MainWindow::checkBox4_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	status_label->Text = "Программа запущена\nРазмерность введена\nМассив сформирован";
+	status_label_alg_flag = true;
+	check_box_changed = true;
+
+	start_button->Enabled = false;
+	start_label->Text = "Набор алгоритмов изменён, требуется подтверждение";
+	start_label->ForeColor = Color::Maroon;
+
+	return System::Void();
+}
+System::Void SortingAlgorithmsWithForms::MainWindow::checkBox5_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	status_label->Text = "Программа запущена\nРазмерность введена\nМассив сформирован";
+	status_label_alg_flag = true;
+	check_box_changed = true;
+
+	start_button->Enabled = false;
+	start_label->Text = "Набор алгоритмов изменён, требуется подтверждение";
+	start_label->ForeColor = Color::Maroon;
+
+	return System::Void();
+}
+System::Void SortingAlgorithmsWithForms::MainWindow::checkBox6_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	status_label->Text = "Программа запущена\nРазмерность введена\nМассив сформирован";
+	status_label_alg_flag = true;
+	check_box_changed = true;
+
+	start_button->Enabled = false;
+	start_label->Text = "Набор алгоритмов изменён, требуется подтверждение";
+	start_label->ForeColor = Color::Maroon;
+
+	return System::Void();
+}
+System::Void SortingAlgorithmsWithForms::MainWindow::checkBox7_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	status_label->Text = "Программа запущена\nРазмерность введена\nМассив сформирован";
+	status_label_alg_flag = true;
+	check_box_changed = true;
+
+	start_button->Enabled = false;
+	start_label->Text = "Набор алгоритмов изменён, требуется подтверждение";
+	start_label->ForeColor = Color::Maroon;
+
+	return System::Void();
+}
+System::Void SortingAlgorithmsWithForms::MainWindow::checkBox8_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	status_label->Text = "Программа запущена\nРазмерность введена\nМассив сформирован";
+	status_label_alg_flag = true;
+	check_box_changed = true;
+
+	start_button->Enabled = false;
+	start_label->Text = "Набор алгоритмов изменён, требуется подтверждение";
+	start_label->ForeColor = Color::Maroon;
+
+	return System::Void();
+}
+System::Void SortingAlgorithmsWithForms::MainWindow::checkBox9_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	status_label->Text = "Программа запущена\nРазмерность введена\nМассив сформирован";
+	status_label_alg_flag = true;
+	check_box_changed = true;
+
+	start_button->Enabled = false;
+	start_label->Text = "Набор алгоритмов изменён, требуется подтверждение";
+	start_label->ForeColor = Color::Maroon;
+
+	return System::Void();
+}
+System::Void SortingAlgorithmsWithForms::MainWindow::checkBox10_CheckedChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	status_label->Text = "Программа запущена\nРазмерность введена\nМассив сформирован";
+	status_label_alg_flag = true;
+	check_box_changed = true;
+
+	start_button->Enabled = false;
+	start_label->Text = "Набор алгоритмов изменён, требуется подтверждение";
+	start_label->ForeColor = Color::Maroon;
+
+	return System::Void();
+}
+
+System::Void SortingAlgorithmsWithForms::MainWindow::exit_button_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	Application::Exit();
+
+	return System::Void();
+}
+
+System::Void SortingAlgorithmsWithForms::MainWindow::exit_short_button_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	Application::Exit();
 
 	return System::Void();
 }
