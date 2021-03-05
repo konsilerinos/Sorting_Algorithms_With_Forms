@@ -487,7 +487,7 @@ System::Void SortingAlgorithmsWithForms::MainWindow::ChoiceSortTesting()
 				array_copy[i] = array[i];
 			}
 		}
-		status_label->Text = status_label->Text + "\nТестирование алгоритма стандартного обмена: " + Convert::ToString(time/counter->Value);
+		status_label->Text = status_label->Text + "\nТестирование алгоритма сортировки выбором: " + Convert::ToString(time/counter->Value);
 	}
 
 	return System::Void();
@@ -510,7 +510,7 @@ System::Void SortingAlgorithmsWithForms::MainWindow::InsertSortTesting()
 				array_copy[i] = array[i];
 			}
 		}
-		status_label->Text = status_label->Text + "\nТестирование алгоритма стандартного обмена: " + Convert::ToString(time / counter->Value);
+		status_label->Text = status_label->Text + "\nТестирование алгоритма сортировки вставками: " + Convert::ToString(time / counter->Value);
 	}
 
 	return System::Void();
@@ -533,7 +533,7 @@ System::Void SortingAlgorithmsWithForms::MainWindow::BinaryInsertSortTesting()
 				array_copy[i] = array[i];
 			}
 		}
-		status_label->Text = status_label->Text + "\nТестирование алгоритма стандартного обмена: " + Convert::ToString(time / counter->Value);
+		status_label->Text = status_label->Text + "\nТестирование алгоритма бинарной сортировки: " + Convert::ToString(time / counter->Value);
 	}
 
 	return System::Void();
@@ -556,7 +556,7 @@ System::Void SortingAlgorithmsWithForms::MainWindow::ShellSortTesting()
 				array_copy[i] = array[i];
 			}
 		}
-		status_label->Text = status_label->Text + "\nТестирование алгоритма стандартного обмена: " + Convert::ToString(time / counter->Value);
+		status_label->Text = status_label->Text + "\nТестирование алгоритма сортировки Шелла: " + Convert::ToString(time / counter->Value);
 	}
 
 	return System::Void();
@@ -579,7 +579,7 @@ System::Void SortingAlgorithmsWithForms::MainWindow::QuickSortTesting()
 				array_copy[i] = array[i];
 			}
 		}
-		status_label->Text = status_label->Text + "\nТестирование алгоритма стандартного обмена: " + Convert::ToString(time / counter->Value);
+		status_label->Text = status_label->Text + "\nТестирование алгоритма быстрой сортировки: " + Convert::ToString(time / counter->Value);
 	}
 
 	return System::Void();
